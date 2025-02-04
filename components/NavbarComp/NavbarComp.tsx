@@ -74,7 +74,7 @@ const NavbarComp = () => {
         </div>
       )}
 
-      {/* Desktop Menu */}
+      {/* Menu */}
 
       {menuOpen && (
         <div className="bg-gray-700 text-white p-2 md:flex hidden gap-[20px] items-center justify-center">
@@ -82,16 +82,19 @@ const NavbarComp = () => {
             <Link href="/">Home</Link>
           </div>
           <div className="block px-[15px] py-[5px] hover:bg-red-400 transition-all duration-150 ease-linear cursor-pointer">
-            <Link href="/">Home</Link>
+            <Link href="/">Price Range</Link>
           </div>
           <div className="block px-[15px] py-[5px] hover:bg-red-400 transition-all duration-150 ease-linear cursor-pointer">
-            <Link href="/">Home</Link>
+            <Link href="/">News</Link>
           </div>
           <div className="block px-[15px] py-[5px] hover:bg-red-400 transition-all duration-150 ease-linear cursor-pointer">
-            <Link href="/">Home</Link>
+            <Link href="/">Filter</Link>
           </div>
           <div className="block px-[15px] py-[5px] hover:bg-red-400 transition-all duration-150 ease-linear cursor-pointer">
-            <Link href="/">Home</Link>
+            <Link href="/">Compare</Link>
+          </div>
+          <div className="block px-[15px] py-[5px] hover:bg-red-400 transition-all duration-150 ease-linear cursor-pointer">
+            <Link href="/">Contact</Link>
           </div>
         </div>
       )}
