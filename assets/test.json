@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Samsung Galaxy S22 Ultra",
+    "brand": "Apple",
+    "model": "iPhone 14 Pro",
+    "img": "https://i.ibb.co/wbxKWKp/gsmarena-007.jpg"
+  },
+  {
+    "name": "OnePlus 10 Pro",
+    "brand": "Samsung",
+    "model": "Galaxy S25 Ultra",
+    "img": "https://i.ibb.co/wbxKWKp/gsmarena-007.jpg"
+  },
+  {
+    "name": "Google Pixel 7 Pro",
+    "brand": "OnePlus",
+    "model": "10 Pro",
+    "img": "https://i.ibb.co/wbxKWKp/gsmarena-007.jpg"
+  },
+  {
+    "name": "Huawei P50 Pro",
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "img": "https://i.ibb.co/wbxKWKp/gsmarena-007.jpg"
+  },
+  {
+    "name": "Xiaomi 13 Pro",
+    "brand": "Huawei",
+    "model": "P50 Pro",
+    "img": "https://i.ibb.co/wbxKWKp/gsmarena-007.jpg"
+  },
+  {
+    "name": "Oppo Find X6 Pro",
+    "brand": "Xiaomi",
+    "model": "13 Pro",
+    "img": "https://i.ibb.co/wbxKWKp/gsmarena-007.jpg"
+  },
+  {
+    "name": "Vivo X90 Pro",
+    "brand": "Oppo",
+    "model": "Find X6 Pro",
+    "img": "https://i.ibb.co/wbxKWKp/gsmarena-007.jpg"
+  },
+  {
+    "name": "Realme GT Neo 5",
+    "brand": "Vivo",
+    "model": "X90 Pro",
+    "img": "https://i.ibb.co/wbxKWKp/gsmarena-007.jpg"
+  },
+  {
+    "name": "Motorola Edge 30 Ultra",
+    "brand": "Realme",
+    "model": "GT Neo 5",
+    "img": "https://i.ibb.co/wbxKWKp/gsmarena-007.jpg"
+  },
+  {
+    "name": "Nokia G60",
+    "brand": "Motorola",
+    "model": "Edge 30 Ultra",
+    "img": "https://i.ibb.co/wbxKWKp/gsmarena-007.jpg"
+  }
+]

@@ -21,7 +21,7 @@ const NavbarComp = () => {
 
   return (
     <div>
-      <nav className="bg-gray-800 p-2 flex items-center justify-between">
+      <nav className="bg-[#012A4A] p-2 flex items-center justify-between">
         {/* Left section: Menu */}
         <div className="flex items-center space-x-4">
           <Menu
@@ -31,7 +31,7 @@ const NavbarComp = () => {
           <span className="text-white font-bold text-xl ">Mobile Dekhan</span>
         </div>
 
-        <div className="bg-gray-700 p-1 rounded items-center hidden md:flex">
+        <div className="bg-[#023E8A] p-1 rounded items-center hidden md:flex">
           <input
             type="text"
             placeholder="Search"
@@ -59,7 +59,7 @@ const NavbarComp = () => {
 
       {/* Mobile Search Bar - appears when search icon is clicked */}
       {searchOpen && (
-        <div className="bg-gray-700 p-2 md:hidden flex items-center space-x-4">
+        <div className="bg-[#01497C] p-2 md:hidden flex items-center space-x-4">
           <input
             type="text"
             placeholder="Search"
@@ -77,23 +77,23 @@ const NavbarComp = () => {
       {/* Menu */}
 
       {menuOpen && (
-        <div className="bg-gray-700 text-white p-2 md:flex hidden gap-[20px] items-center justify-center">
-          <div className="block px-[15px] py-[5px] hover:bg-red-400 transition-all duration-150 ease-linear cursor-pointer">
+        <div className="bg-[#01497C] text-white p-2 md:flex hidden gap-[20px] items-center justify-center">
+          <div className="block px-[15px] py-[5px] hover:bg-[#013A63] transition-all duration-150 ease-linear cursor-pointer">
             <Link href="/">Home</Link>
           </div>
-          <div className="block px-[15px] py-[5px] hover:bg-red-400 transition-all duration-150 ease-linear cursor-pointer">
+          <div className="block px-[15px] py-[5px] hover:bg-[#013A63] transition-all duration-150 ease-linear cursor-pointer">
             <Link href="/">Price Range</Link>
           </div>
-          <div className="block px-[15px] py-[5px] hover:bg-red-400 transition-all duration-150 ease-linear cursor-pointer">
+          <div className="block px-[15px] py-[5px] hover:bg-[#013A63] transition-all duration-150 ease-linear cursor-pointer">
             <Link href="/">News</Link>
           </div>
-          <div className="block px-[15px] py-[5px] hover:bg-red-400 transition-all duration-150 ease-linear cursor-pointer">
+          <div className="block px-[15px] py-[5px] hover:bg-[#013A63] transition-all duration-150 ease-linear cursor-pointer">
             <Link href="/">Filter</Link>
           </div>
-          <div className="block px-[15px] py-[5px] hover:bg-red-400 transition-all duration-150 ease-linear cursor-pointer">
+          <div className="block px-[15px] py-[5px] hover:bg-[#013A63] transition-all duration-150 ease-linear cursor-pointer">
             <Link href="/">Compare</Link>
           </div>
-          <div className="block px-[15px] py-[5px] hover:bg-red-400 transition-all duration-150 ease-linear cursor-pointer">
+          <div className="block px-[15px] py-[5px] hover:bg-[#013A63] transition-all duration-150 ease-linear cursor-pointer">
             <Link href="/">Contact</Link>
           </div>
         </div>
