@@ -1,12 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-import { PhoneDataResponse } from "@/interface/phoneResponse";
+import { LatestDeviceInHomeData } from "@/interface/LatestDeviceInHome";
 import Link from "next/link";
 import { Suspense } from "react";
 const LatestDevices = async () => {
-  const data = await fetch("http://localhost:3004/api/v1/get-phones", {
-    cache: "no-cache",
-  });
-  const posts: PhoneDataResponse = await data.json();
+  const data = await fetch(
+    "http://localhost:3004/api/v1/get-latest-phone-home",
+    {
+      cache: "force-cache",
+      next: { revalidate: 3600 },
+    }
+  );
+  const posts: LatestDeviceInHomeData = await data.json();
 
   console.log("from homepage=> ", posts);
 
@@ -24,7 +28,9 @@ const LatestDevices = async () => {
               <div>
                 <img src={post.image} alt={post.model} />
                 <div className="p-4 space-y-1">
-                  <p>{post.model}</p>
+                  <p className="hover:underline hover:text-blue-600 transition-all duration-200 ease-in-out">
+                    {post.model}
+                  </p>
                   <p>{post.price} Taka</p>
                 </div>
               </div>
