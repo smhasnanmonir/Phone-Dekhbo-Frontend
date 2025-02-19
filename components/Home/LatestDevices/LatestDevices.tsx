@@ -1,41 +1,34 @@
 /* eslint-disable @next/next/no-img-element */
-
+import { PhoneDataResponse } from "@/interface/phoneResponse";
+import Link from "next/link";
 import { Suspense } from "react";
 const LatestDevices = async () => {
-  const data = await fetch(
-    "https://raw.githubusercontent.com/smhasnanmonir/Mobile-Dekhan-Frontend/refs/heads/main/assets/test.json",
-    {
-      cache: "no-cache",
-    }
-  );
-  const posts = await data.json();
+  const data = await fetch("http://localhost:3004/api/v1/get-phones", {
+    cache: "no-cache",
+  });
+  const posts: PhoneDataResponse = await data.json();
 
-  interface Device {
-    name: string;
-    brand: string;
-    model: string;
-    img: string;
-  }
+  console.log("from homepage=> ", posts);
 
   return (
-    <div className="w-full">
+    <div className="w-full pb-[10px]">
       <h1 className="font-semibold py-[15px]">Latest Devices</h1>
       <div className="grid grid-cols-5 gap-6 w-full">
         <Suspense fallback={<div>Loading...</div>}>
-          {posts.map((post: Device) => (
-            <div
+          {posts?.data?.map((post) => (
+            <Link
+              href={`/phones/${post?.slug}`}
               key={post?.model}
-              className="border border-b-2 border-blue-300"
+              className="border border-b-2 border-blue-300 block"
             >
               <div>
-                <img src={post.img} alt={post.name} />
-                <div className="p-4">
-                  <h1>{post.name}</h1>
-                  <p>{post.brand}</p>
+                <img src={post.image} alt={post.model} />
+                <div className="p-4 space-y-1">
                   <p>{post.model}</p>
+                  <p>{post.price} Taka</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </Suspense>
       </div>

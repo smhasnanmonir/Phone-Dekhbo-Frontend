@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-const NewsSection = () => {
+const HomePageTop3New = () => {
   return (
     <div className="overflow-hidden">
       <div className="grid grid-cols-3">
@@ -31,4 +31,4 @@ const NewsSection = () => {
   );
 };
 
-export default NewsSection;
+export default HomePageTop3New;

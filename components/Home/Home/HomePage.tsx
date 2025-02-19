@@ -1,5 +1,6 @@
+import HomePageTop3New from "../HomePageTop3New/HomePageTop3New";
 import LatestDevices from "../LatestDevices/LatestDevices";
-import NewsSection from "../NewsSection/NewsSection";
+
 import PhoneFinder from "../PhoneFinder/PhoneFinder";
 
 export default function HomePage() {
@@ -10,7 +11,7 @@ export default function HomePage() {
           <PhoneFinder></PhoneFinder>
         </div>
         <div>
-          <NewsSection></NewsSection>
+          <HomePageTop3New></HomePageTop3New>
         </div>
       </div>
       <div>
