@@ -1,12 +1,17 @@
 import {
   BodySpec,
+  ChipsetSpec,
   DisplaySpec,
+  MemorySpec,
   SinglePhoneData,
 } from "@/interface/singlePhoneResponse";
 import {
   BadgeDollarSign,
+  Cpu,
+  DatabaseBackup,
   EarthLock,
   Monitor,
+  ShieldCheck,
   TabletSmartphone,
 } from "lucide-react";
 import PhoneSpecReuseAble from "./PhoneSpecReuseAble/PhoneSpecReuseAble";
@@ -54,6 +59,32 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
         icon={Monitor}
       />
       {/* Display Div Ends */}
+
+      {/* Operating system Div Start */}
+      <PhoneSpecReuseAble
+        title={"Operating System"}
+        secondDivTitle={"Released with:"}
+        secondaryTitle={device?.data?.specs[0]?.os}
+        icon={ShieldCheck}
+        secondDivParaOptional={""}
+      />
+      {/* Operating system Div Ends */}
+
+      {/* Chipset Div Start */}
+      <PhoneSpecReuseAbleNested
+        title={"Chipset"}
+        nestedData={device?.data?.specs[0]?.chipset as ChipsetSpec}
+        icon={Cpu}
+      />
+      {/* Chipset Div Ends */}
+
+      {/* Memory Div Start */}
+      <PhoneSpecReuseAbleNested
+        title={"Memory"}
+        nestedData={device?.data?.specs[0]?.memory as MemorySpec}
+        icon={DatabaseBackup}
+      />
+      {/* Memory Div Ends */}
     </div>
   );
 };
