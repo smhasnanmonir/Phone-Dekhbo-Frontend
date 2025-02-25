@@ -12,8 +12,6 @@ const LatestDevices = async () => {
   );
   const posts: LatestDeviceInHomeData = await data.json();
 
-  console.log("from homepage=> ", posts);
-
   return (
     <div className="w-full pb-[10px]">
       <h1 className="font-semibold py-[15px]">Latest Devices</h1>

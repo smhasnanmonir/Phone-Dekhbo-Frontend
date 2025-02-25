@@ -77,7 +77,13 @@ const NavbarComp = () => {
       {/* Menu */}
 
       {menuOpen && (
-        <div className="bg-[#01497C] text-white p-2 md:flex hidden gap-[20px] items-center justify-center">
+        <div
+          className="bg-[#01497C] text-white p-2 md:flex hidden gap-[20px] items-center justify-center transition-all duration-300 ease-in-out"
+          style={{
+            height: menuOpen ? "auto" : "0",
+            overflow: "hidden",
+          }}
+        >
           <div className="block px-[15px] py-[5px] hover:bg-[#013A63] transition-all duration-150 ease-linear cursor-pointer">
             <Link href="/">Home</Link>
           </div>

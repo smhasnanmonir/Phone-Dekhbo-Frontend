@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import PhoneBrief from "@/components/PhoneDetails/PhoneBrief/PhoneBrief";
+import PhoneSpecification from "@/components/PhoneDetails/PhoneSpecification/PhoneSpecification";
 import ProsCons from "@/components/PhoneDetails/ProsCons/ProsCons";
 import { SinglePhoneData } from "@/interface/singlePhoneResponse";
 
@@ -13,7 +14,6 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     }
   );
   const device: SinglePhoneData = await data.json();
-  console.log("specs =>", device?.data?.specs);
   return (
     <div className="pb-[20px]">
       <div>
@@ -27,6 +27,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <PhoneBrief device={device} />
           <ProsCons device={device}></ProsCons>
         </div>
+        <PhoneSpecification device={device}></PhoneSpecification>
       </div>
     </div>
   );

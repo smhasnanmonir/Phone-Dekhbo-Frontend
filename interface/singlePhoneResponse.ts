@@ -16,7 +16,7 @@ interface PhoneDetails {
   specs: PhoneSpec[];
 }
 
-interface PhoneSpec {
+export interface PhoneSpec {
   id: number;
   phoneId: number;
   network: string;
@@ -36,14 +36,14 @@ interface PhoneSpec {
   ratings: Ratings;
 }
 
-interface BodySpec {
+export interface BodySpec {
   sim: string;
   build: string;
   weight: number;
   dimensions: string;
 }
 
-interface DisplaySpec {
+export interface DisplaySpec {
   size: number;
   colors: string;
   features: string[];
@@ -55,7 +55,7 @@ interface DisplaySpec {
   contrastRatio: string;
 }
 
-interface ChipsetSpec {
+export interface ChipsetSpec {
   gpu: string;
   model: string;
   coprocessor: string;
@@ -63,12 +63,12 @@ interface ChipsetSpec {
   manufacturer: string;
 }
 
-interface MemorySpec {
+export interface MemorySpec {
   external: string | null;
   internal: string;
 }
 
-interface CameraSpec {
+export interface CameraSpec {
   lens: string;
   main: string;
   other: string;
@@ -79,33 +79,33 @@ interface CameraSpec {
   ultrawide: string;
 }
 
-interface SoundSpec {
+export interface SoundSpec {
   microphone: boolean;
   speakerType: string;
   audioFeatures: string[];
   noiseCancellation: boolean;
 }
 
-interface ConnectionSpec {
+export interface ConnectionSpec {
   nfc: boolean;
   usb: string;
   wlan: string;
   bluetooth: string;
 }
 
-interface PortsSpec {
+export interface PortsSpec {
   chargingType: string;
   headphoneJack: string | null;
 }
 
-interface BatterySpec {
+export interface BatterySpec {
   capacity: number;
   fastCharge: boolean;
   chargingTime: string;
   dischargingTime: string;
 }
 
-interface Ratings {
+export interface Ratings {
   camera: string;
   design: string;
   battery: string;
