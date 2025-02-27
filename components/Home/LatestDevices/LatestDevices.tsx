@@ -2,6 +2,15 @@
 import { LatestDeviceInHomeData } from "@/interface/LatestDeviceInHome";
 import Link from "next/link";
 import { Suspense } from "react";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Get Latest Mobile Phones information in Bangladesh",
+  description:
+    "Get the latest mobile phones information in Bangladesh. Find the best mobile phones with the latest features and specifications.",
+};
+
 const LatestDevices = async () => {
   const data = await fetch(
     "http://localhost:3004/api/v1/get-latest-phone-home",
