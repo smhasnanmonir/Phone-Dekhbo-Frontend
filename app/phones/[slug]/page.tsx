@@ -28,8 +28,8 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           <PhoneBrief device={device} />
         </div>
         <PhoneSpecification device={device}></PhoneSpecification>
-        <ProsCons device={device}></ProsCons>
-        <Rating device={device} />
+        <ProsCons deviceProsCons={device?.data?.specs?.[0]}></ProsCons>
+        <Rating deviceRating={device?.data?.specs?.[0]?.ratings} />
       </div>
     </div>
   );

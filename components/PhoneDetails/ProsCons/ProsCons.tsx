@@ -1,6 +1,6 @@
-import { SinglePhoneData } from "@/interface/singlePhoneResponse";
+import { PhoneSpec } from "@/interface/singlePhoneResponse";
 
-const ProsCons = ({ device }: { device: SinglePhoneData }) => {
+const ProsCons = ({ deviceProsCons }: { deviceProsCons: PhoneSpec }) => {
   return (
     <div>
       <h1 className="py-[16px] text-2xl underline decoration-[2px] underline-offset underline-offset-[8px] decoration-blue-400">
@@ -10,7 +10,7 @@ const ProsCons = ({ device }: { device: SinglePhoneData }) => {
         <div className="bg-green-400 p-3 rounded-sm">
           <h1 className=" text-white text-xl font-semibold">Pros</h1>
           <ul className=" text-white ">
-            {device?.data?.specs[0]?.pros?.map((pro, index) => (
+            {deviceProsCons.pros.map((pro, index) => (
               <li className="style-none" key={index}>
                 {index + 1}
                 {": "}
@@ -22,7 +22,7 @@ const ProsCons = ({ device }: { device: SinglePhoneData }) => {
         <div className="bg-red-400 p-3 rounded-sm">
           <h1 className="font-semibold text-xl text-white">Cons</h1>
           <ul className=" text-white ">
-            {device?.data?.specs[0]?.cons?.map((pro, index) => (
+            {deviceProsCons.cons.map((pro, index) => (
               <li className="style-none" key={index}>
                 {index + 1}
                 {": "}
