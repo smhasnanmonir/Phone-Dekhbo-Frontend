@@ -1,24 +1,35 @@
 import {
+  BatterySpec,
   BodySpec,
+  CameraSpec,
   ChipsetSpec,
+  ConnectionSpec,
   DisplaySpec,
   MemorySpec,
+  PortsSpec,
+  Ratings,
   SinglePhoneData,
+  SoundSpec,
 } from "@/interface/singlePhoneResponse";
 import {
   BadgeDollarSign,
+  Camera,
   Cpu,
   DatabaseBackup,
   EarthLock,
   Monitor,
   ShieldCheck,
   TabletSmartphone,
+  BellDot,
+  Wifi,
+  Plug,
+  BatteryCharging,
+  Star,
 } from "lucide-react";
 import PhoneSpecReuseAble from "./PhoneSpecReuseAble/PhoneSpecReuseAble";
 import PhoneSpecReuseAbleNested from "./PhoneSpecReuseAbleNested/PhoneSpecReuseAbleNested";
 
 const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
-  console.log(device.data.specs[0]);
   return (
     <div>
       <h1 className="text-2xl font-semibold py-[8px] underline decoration-[2px] underline-offset underline-offset-[8px] decoration-blue-400">
@@ -85,6 +96,62 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
         icon={DatabaseBackup}
       />
       {/* Memory Div Ends */}
+
+      {/* Camera Div Start */}
+      <PhoneSpecReuseAbleNested
+        title={"Camera"}
+        nestedData={device?.data?.specs[0]?.camera as CameraSpec}
+        icon={Camera}
+      />
+      {/* Camera Div Ends */}
+
+      {/* So Div Start */}
+      <PhoneSpecReuseAbleNested
+        title={"Camera"}
+        nestedData={device?.data?.specs[0]?.camera as CameraSpec}
+        icon={Camera}
+      />
+      {/* Camera Div Ends */}
+
+      {/* Sound Div Start */}
+      <PhoneSpecReuseAbleNested
+        title={"Sound"}
+        nestedData={device?.data?.specs[0]?.sound as SoundSpec}
+        icon={BellDot}
+      />
+      {/* Sound Div Ends */}
+
+      {/* Connection Div Start */}
+      <PhoneSpecReuseAbleNested
+        title={"Connection"}
+        nestedData={device?.data?.specs[0]?.connection as ConnectionSpec}
+        icon={Wifi}
+      />
+      {/* Connection Div Ends */}
+
+      {/* Ports Div Start */}
+      <PhoneSpecReuseAbleNested
+        title={"Ports"}
+        nestedData={device?.data?.specs[0]?.ports as PortsSpec}
+        icon={Plug}
+      />
+      {/* Ports Div Ends */}
+
+      {/* Battery Div Start */}
+      <PhoneSpecReuseAbleNested
+        title={"Battery"}
+        nestedData={device?.data?.specs[0]?.battery as BatterySpec}
+        icon={BatteryCharging}
+      />
+      {/* Battery Div Ends */}
+
+      {/* Ratings Div Start */}
+      <PhoneSpecReuseAbleNested
+        title={"Ratings"}
+        nestedData={device?.data?.specs[0]?.ratings as Ratings}
+        icon={Star}
+      />
+      {/* Ratings Div Ends */}
     </div>
   );
 };

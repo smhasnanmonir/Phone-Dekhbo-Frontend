@@ -1,9 +1,17 @@
+import { LucideIcon } from "lucide-react";
+
 const PhoneSpecReuseAble = ({
   title,
   secondaryTitle,
   icon: Icon,
   secondDivTitle,
   secondDivParaOptional,
+}: {
+  title: string;
+  secondaryTitle: string | number | null;
+  icon: LucideIcon;
+  secondDivTitle: string | number | null;
+  secondDivParaOptional: string | number | null;
 }) => {
   return (
     <div className="py-[8px]">

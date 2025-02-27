@@ -2,6 +2,7 @@
 import PhoneBrief from "@/components/PhoneDetails/PhoneBrief/PhoneBrief";
 import PhoneSpecification from "@/components/PhoneDetails/PhoneSpecification/PhoneSpecification";
 import ProsCons from "@/components/PhoneDetails/ProsCons/ProsCons";
+import Rating from "@/components/PhoneDetails/Rating/Rating";
 import { SinglePhoneData } from "@/interface/singlePhoneResponse";
 
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
@@ -25,9 +26,10 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             className="shadow-md rounded-sm w-full h-full object-cover"
           />
           <PhoneBrief device={device} />
-          <ProsCons device={device}></ProsCons>
         </div>
         <PhoneSpecification device={device}></PhoneSpecification>
+        <ProsCons device={device}></ProsCons>
+        <Rating device={device} />
       </div>
     </div>
   );
