@@ -27,7 +27,6 @@ import {
   Star,
 } from "lucide-react";
 import PhoneSpecReuseAble from "./PhoneSpecReuseAble/PhoneSpecReuseAble";
-import PhoneSpecReuseAbleNested from "./PhoneSpecReuseAbleNested/PhoneSpecReuseAbleNested";
 
 const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
   return (
@@ -56,7 +55,7 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
       {/* Network Div Ends */}
 
       {/* Body Div Start */}
-      <PhoneSpecReuseAbleNested
+      <PhoneSpecReuseAble
         title={"Body"}
         nestedData={device?.data?.specs[0]?.body as BodySpec}
         icon={TabletSmartphone}
@@ -64,7 +63,7 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
       {/* Body Div Ends */}
 
       {/* Display Div Start */}
-      <PhoneSpecReuseAbleNested
+      <PhoneSpecReuseAble
         title={"Display"}
         nestedData={device?.data?.specs[0]?.display as DisplaySpec}
         icon={Monitor}
@@ -82,7 +81,7 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
       {/* Operating system Div Ends */}
 
       {/* Chipset Div Start */}
-      <PhoneSpecReuseAbleNested
+      <PhoneSpecReuseAble
         title={"Chipset"}
         nestedData={device?.data?.specs[0]?.chipset as ChipsetSpec}
         icon={Cpu}
@@ -90,7 +89,7 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
       {/* Chipset Div Ends */}
 
       {/* Memory Div Start */}
-      <PhoneSpecReuseAbleNested
+      <PhoneSpecReuseAble
         title={"Memory"}
         nestedData={device?.data?.specs[0]?.memory as MemorySpec}
         icon={DatabaseBackup}
@@ -98,7 +97,7 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
       {/* Memory Div Ends */}
 
       {/* Camera Div Start */}
-      <PhoneSpecReuseAbleNested
+      <PhoneSpecReuseAble
         title={"Camera"}
         nestedData={device?.data?.specs[0]?.camera as CameraSpec}
         icon={Camera}
@@ -106,7 +105,7 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
       {/* Camera Div Ends */}
 
       {/* So Div Start */}
-      <PhoneSpecReuseAbleNested
+      <PhoneSpecReuseAble
         title={"Camera"}
         nestedData={device?.data?.specs[0]?.camera as CameraSpec}
         icon={Camera}
@@ -114,7 +113,7 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
       {/* Camera Div Ends */}
 
       {/* Sound Div Start */}
-      <PhoneSpecReuseAbleNested
+      <PhoneSpecReuseAble
         title={"Sound"}
         nestedData={device?.data?.specs[0]?.sound as SoundSpec}
         icon={BellDot}
@@ -122,7 +121,7 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
       {/* Sound Div Ends */}
 
       {/* Connection Div Start */}
-      <PhoneSpecReuseAbleNested
+      <PhoneSpecReuseAble
         title={"Connection"}
         nestedData={device?.data?.specs[0]?.connection as ConnectionSpec}
         icon={Wifi}
@@ -130,7 +129,7 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
       {/* Connection Div Ends */}
 
       {/* Ports Div Start */}
-      <PhoneSpecReuseAbleNested
+      <PhoneSpecReuseAble
         title={"Ports"}
         nestedData={device?.data?.specs[0]?.ports as PortsSpec}
         icon={Plug}
@@ -138,7 +137,7 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
       {/* Ports Div Ends */}
 
       {/* Battery Div Start */}
-      <PhoneSpecReuseAbleNested
+      <PhoneSpecReuseAble
         title={"Battery"}
         nestedData={device?.data?.specs[0]?.battery as BatterySpec}
         icon={BatteryCharging}
@@ -146,7 +145,7 @@ const PhoneSpecification = ({ device }: { device: SinglePhoneData }) => {
       {/* Battery Div Ends */}
 
       {/* Ratings Div Start */}
-      <PhoneSpecReuseAbleNested
+      <PhoneSpecReuseAble
         title={"Ratings"}
         nestedData={device?.data?.specs[0]?.ratings as Ratings}
         icon={Star}

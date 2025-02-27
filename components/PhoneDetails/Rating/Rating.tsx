@@ -13,7 +13,7 @@ const Rating = ({ deviceRating }: { deviceRating: Ratings }) => {
 
   return (
     <div className="py-[20px]">
-      <h1 className="text-2xl font-semibold decoration-blue-400 underline underline-offset-8">
+      <h1 className="text-2xl font-semibold decoration-blue-400 underline underline-offset-8 decoration-2">
         Our Ratings
       </h1>
       <div className="grid grid-cols-4 gap-4 pt-[20px]">
